@@ -15,6 +15,8 @@
 		EBD346352A6D74F70074CE57 /* katibTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD346342A6D74F70074CE57 /* katibTests.swift */; };
 		EBD3463F2A6D74F70074CE57 /* katibUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD3463E2A6D74F70074CE57 /* katibUITests.swift */; };
 		EBD346412A6D74F70074CE57 /* katibUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD346402A6D74F70074CE57 /* katibUITestsLaunchTests.swift */; };
+		EBD3464F2A91150B0074CE57 /* SwiftDate in Frameworks */ = {isa = PBXBuildFile; productRef = EBD3464E2A91150B0074CE57 /* SwiftDate */; };
+		EBD346522A9115250074CE57 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = EBD346512A9115250074CE57 /* SnapKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +56,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EBD3464F2A91150B0074CE57 /* SwiftDate in Frameworks */,
+				EBD346522A9115250074CE57 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -140,6 +144,10 @@
 			dependencies = (
 			);
 			name = katib;
+			packageProductDependencies = (
+				EBD3464E2A91150B0074CE57 /* SwiftDate */,
+				EBD346512A9115250074CE57 /* SnapKit */,
+			);
 			productName = katib;
 			productReference = EBD3461A2A6D74F60074CE57 /* katib.app */;
 			productType = "com.apple.product-type.application";
@@ -212,6 +220,10 @@
 				Base,
 			);
 			mainGroup = EBD346112A6D74F60074CE57;
+			packageReferences = (
+				EBD3464D2A91150B0074CE57 /* XCRemoteSwiftPackageReference "SwiftDate" */,
+				EBD346502A9115250074CE57 /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = EBD3461B2A6D74F60074CE57 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -435,7 +447,7 @@
 				INFOPLIST_KEY_UIStatusBarStyle = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -466,7 +478,7 @@
 				INFOPLIST_KEY_UIStatusBarStyle = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -596,6 +608,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		EBD3464D2A91150B0074CE57 /* XCRemoteSwiftPackageReference "SwiftDate" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/malcommac/SwiftDate";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
+		EBD346502A9115250074CE57 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		EBD3464E2A91150B0074CE57 /* SwiftDate */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EBD3464D2A91150B0074CE57 /* XCRemoteSwiftPackageReference "SwiftDate" */;
+			productName = SwiftDate;
+		};
+		EBD346512A9115250074CE57 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EBD346502A9115250074CE57 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = EBD346122A6D74F60074CE57 /* Project object */;
 }
