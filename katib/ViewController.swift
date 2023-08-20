@@ -161,7 +161,6 @@ extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate, 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         .init()
     }
-    
 }
 
 extension DateInterval {
@@ -170,7 +169,7 @@ extension DateInterval {
     }
     
     func dayFor(_ index: Int) -> Date {
-        return Calendar.current.date(byAdding: .day, value: index, to: start) ?? .init()
+        return Calendar.current.date(byAdding: .day, value: -index, to: end) ?? .init()
     }
 }
 
