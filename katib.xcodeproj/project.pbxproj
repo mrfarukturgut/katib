@@ -15,8 +15,8 @@
 		EBD346352A6D74F70074CE57 /* katibTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD346342A6D74F70074CE57 /* katibTests.swift */; };
 		EBD3463F2A6D74F70074CE57 /* katibUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD3463E2A6D74F70074CE57 /* katibUITests.swift */; };
 		EBD346412A6D74F70074CE57 /* katibUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD346402A6D74F70074CE57 /* katibUITestsLaunchTests.swift */; };
-		EBD3464F2A91150B0074CE57 /* SwiftDate in Frameworks */ = {isa = PBXBuildFile; productRef = EBD3464E2A91150B0074CE57 /* SwiftDate */; };
 		EBD346522A9115250074CE57 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = EBD346512A9115250074CE57 /* SnapKit */; };
+		EBD346552A924E440074CE57 /* Reusable in Frameworks */ = {isa = PBXBuildFile; productRef = EBD346542A924E440074CE57 /* Reusable */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,8 +56,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EBD3464F2A91150B0074CE57 /* SwiftDate in Frameworks */,
 				EBD346522A9115250074CE57 /* SnapKit in Frameworks */,
+				EBD346552A924E440074CE57 /* Reusable in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -145,8 +145,8 @@
 			);
 			name = katib;
 			packageProductDependencies = (
-				EBD3464E2A91150B0074CE57 /* SwiftDate */,
 				EBD346512A9115250074CE57 /* SnapKit */,
+				EBD346542A924E440074CE57 /* Reusable */,
 			);
 			productName = katib;
 			productReference = EBD3461A2A6D74F60074CE57 /* katib.app */;
@@ -221,8 +221,8 @@
 			);
 			mainGroup = EBD346112A6D74F60074CE57;
 			packageReferences = (
-				EBD3464D2A91150B0074CE57 /* XCRemoteSwiftPackageReference "SwiftDate" */,
 				EBD346502A9115250074CE57 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				EBD346532A924E440074CE57 /* XCRemoteSwiftPackageReference "Reusable" */,
 			);
 			productRefGroup = EBD3461B2A6D74F60074CE57 /* Products */;
 			projectDirPath = "";
@@ -610,14 +610,6 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		EBD3464D2A91150B0074CE57 /* XCRemoteSwiftPackageReference "SwiftDate" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/malcommac/SwiftDate";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 7.0.0;
-			};
-		};
 		EBD346502A9115250074CE57 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SnapKit/SnapKit";
@@ -626,18 +618,26 @@
 				minimumVersion = 5.0.0;
 			};
 		};
+		EBD346532A924E440074CE57 /* XCRemoteSwiftPackageReference "Reusable" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AliSoftware/Reusable";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		EBD3464E2A91150B0074CE57 /* SwiftDate */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = EBD3464D2A91150B0074CE57 /* XCRemoteSwiftPackageReference "SwiftDate" */;
-			productName = SwiftDate;
-		};
 		EBD346512A9115250074CE57 /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = EBD346502A9115250074CE57 /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = SnapKit;
+		};
+		EBD346542A924E440074CE57 /* Reusable */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EBD346532A924E440074CE57 /* XCRemoteSwiftPackageReference "Reusable" */;
+			productName = Reusable;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
