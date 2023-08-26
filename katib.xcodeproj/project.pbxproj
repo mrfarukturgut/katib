@@ -7,9 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EBD197C42A9A9128005852F5 /* DayCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD197C32A9A9128005852F5 /* DayCell.swift */; };
+		EBD197C62A9A9150005852F5 /* PrayerHistoryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD197C52A9A9150005852F5 /* PrayerHistoryController.swift */; };
+		EBD197C82A9A91A9005852F5 /* Day.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD197C72A9A91A9005852F5 /* Day.swift */; };
+		EBD197CA2A9A91C0005852F5 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD197C92A9A91C0005852F5 /* Extensions.swift */; };
 		EBD3461E2A6D74F60074CE57 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD3461D2A6D74F60074CE57 /* AppDelegate.swift */; };
 		EBD346202A6D74F60074CE57 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD3461F2A6D74F60074CE57 /* SceneDelegate.swift */; };
-		EBD346222A6D74F60074CE57 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD346212A6D74F60074CE57 /* ViewController.swift */; };
 		EBD346272A6D74F70074CE57 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EBD346262A6D74F70074CE57 /* Assets.xcassets */; };
 		EBD3462A2A6D74F70074CE57 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBD346282A6D74F70074CE57 /* LaunchScreen.storyboard */; };
 		EBD346352A6D74F70074CE57 /* katibTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD346342A6D74F70074CE57 /* katibTests.swift */; };
@@ -37,10 +40,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EBD197C32A9A9128005852F5 /* DayCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayCell.swift; sourceTree = "<group>"; };
+		EBD197C52A9A9150005852F5 /* PrayerHistoryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayerHistoryController.swift; sourceTree = "<group>"; };
+		EBD197C72A9A91A9005852F5 /* Day.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day.swift; sourceTree = "<group>"; };
+		EBD197C92A9A91C0005852F5 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		EBD3461A2A6D74F60074CE57 /* katib.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = katib.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBD3461D2A6D74F60074CE57 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EBD3461F2A6D74F60074CE57 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		EBD346212A6D74F60074CE57 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		EBD346262A6D74F70074CE57 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EBD346292A6D74F70074CE57 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EBD3462B2A6D74F70074CE57 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -78,6 +84,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EBD197BF2A9A90F4005852F5 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				EBD197C02A9A90FD005852F5 /* PrayerHistory */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		EBD197C02A9A90FD005852F5 /* PrayerHistory */ = {
+			isa = PBXGroup;
+			children = (
+				EBD197C22A9A9118005852F5 /* Cells */,
+				EBD197C52A9A9150005852F5 /* PrayerHistoryController.swift */,
+			);
+			path = PrayerHistory;
+			sourceTree = "<group>";
+		};
+		EBD197C12A9A910C005852F5 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				EBD197C72A9A91A9005852F5 /* Day.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		EBD197C22A9A9118005852F5 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				EBD197C32A9A9128005852F5 /* DayCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		EBD346112A6D74F60074CE57 = {
 			isa = PBXGroup;
 			children = (
@@ -101,9 +140,11 @@
 		EBD3461C2A6D74F60074CE57 /* katib */ = {
 			isa = PBXGroup;
 			children = (
+				EBD197C12A9A910C005852F5 /* Models */,
+				EBD197BF2A9A90F4005852F5 /* Modules */,
 				EBD3461D2A6D74F60074CE57 /* AppDelegate.swift */,
 				EBD3461F2A6D74F60074CE57 /* SceneDelegate.swift */,
-				EBD346212A6D74F60074CE57 /* ViewController.swift */,
+				EBD197C92A9A91C0005852F5 /* Extensions.swift */,
 				EBD346262A6D74F70074CE57 /* Assets.xcassets */,
 				EBD346282A6D74F70074CE57 /* LaunchScreen.storyboard */,
 				EBD3462B2A6D74F70074CE57 /* Info.plist */,
@@ -266,9 +307,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EBD346222A6D74F60074CE57 /* ViewController.swift in Sources */,
+				EBD197C42A9A9128005852F5 /* DayCell.swift in Sources */,
+				EBD197C82A9A91A9005852F5 /* Day.swift in Sources */,
 				EBD3461E2A6D74F60074CE57 /* AppDelegate.swift in Sources */,
+				EBD197C62A9A9150005852F5 /* PrayerHistoryController.swift in Sources */,
 				EBD346202A6D74F60074CE57 /* SceneDelegate.swift in Sources */,
+				EBD197CA2A9A91C0005852F5 /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
