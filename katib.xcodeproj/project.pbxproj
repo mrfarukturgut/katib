@@ -12,7 +12,7 @@
 		EBD197C82A9A91A9005852F5 /* Day.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD197C72A9A91A9005852F5 /* Day.swift */; };
 		EBD197CA2A9A91C0005852F5 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD197C92A9A91C0005852F5 /* Extensions.swift */; };
 		EBD197CD2A9BA02C005852F5 /* PrayerHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD197CC2A9BA02C005852F5 /* PrayerHistoryView.swift */; };
-		EBD197D12A9BA0E3005852F5 /* HorizontallWheelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD197D02A9BA0E3005852F5 /* HorizontallWheelView.swift */; };
+		EBD197D12A9BA0E3005852F5 /* HorizontalWheelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD197D02A9BA0E3005852F5 /* HorizontalWheelView.swift */; };
 		EBD3461E2A6D74F60074CE57 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD3461D2A6D74F60074CE57 /* AppDelegate.swift */; };
 		EBD346202A6D74F60074CE57 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD3461F2A6D74F60074CE57 /* SceneDelegate.swift */; };
 		EBD346272A6D74F70074CE57 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EBD346262A6D74F70074CE57 /* Assets.xcassets */; };
@@ -47,7 +47,7 @@
 		EBD197C72A9A91A9005852F5 /* Day.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day.swift; sourceTree = "<group>"; };
 		EBD197C92A9A91C0005852F5 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		EBD197CC2A9BA02C005852F5 /* PrayerHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayerHistoryView.swift; sourceTree = "<group>"; };
-		EBD197D02A9BA0E3005852F5 /* HorizontallWheelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontallWheelView.swift; sourceTree = "<group>"; };
+		EBD197D02A9BA0E3005852F5 /* HorizontalWheelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalWheelView.swift; sourceTree = "<group>"; };
 		EBD3461A2A6D74F60074CE57 /* katib.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = katib.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBD3461D2A6D74F60074CE57 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EBD3461F2A6D74F60074CE57 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -141,7 +141,7 @@
 		EBD197CF2A9BA0CD005852F5 /* HorizontallWheel */ = {
 			isa = PBXGroup;
 			children = (
-				EBD197D02A9BA0E3005852F5 /* HorizontallWheelView.swift */,
+				EBD197D02A9BA0E3005852F5 /* HorizontalWheelView.swift */,
 			);
 			path = HorizontallWheel;
 			sourceTree = "<group>";
@@ -341,7 +341,7 @@
 				EBD197C82A9A91A9005852F5 /* Day.swift in Sources */,
 				EBD3461E2A6D74F60074CE57 /* AppDelegate.swift in Sources */,
 				EBD197CD2A9BA02C005852F5 /* PrayerHistoryView.swift in Sources */,
-				EBD197D12A9BA0E3005852F5 /* HorizontallWheelView.swift in Sources */,
+				EBD197D12A9BA0E3005852F5 /* HorizontalWheelView.swift in Sources */,
 				EBD197C62A9A9150005852F5 /* PrayerHistoryController.swift in Sources */,
 				EBD346202A6D74F60074CE57 /* SceneDelegate.swift in Sources */,
 				EBD197CA2A9A91C0005852F5 /* Extensions.swift in Sources */,
