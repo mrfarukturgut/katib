@@ -10,9 +10,30 @@ import Reusable
 import SnapKit
 import UIKit
 
+struct CellModel {
+    let title: String
+    let isSelected: Bool
+}
+
 class Cell: UICollectionViewCell, Reusable {
+    
+    enum Constants {
+        static let font = UIFont.systemFont(ofSize: 14)
+    }
+    
+    private lazy var containerView: UIView = {
+        let view = UIView()
+        view.backgroundColor = .systemBlue
+        return view
+    }()
+    
     private lazy var titleLabel: UILabel = {
-        .init()
+        let label = UILabel()
+        label.textAlignment = .center
+        label.font = Constants.font
+        label.numberOfLines = 1
+        label.lineBreakMode = .byWordWrapping
+        return label
     }()
     
     override var isSelected: Bool {
@@ -30,7 +51,13 @@ class Cell: UICollectionViewCell, Reusable {
         
         contentView.backgroundColor = .systemBlue
         
-        contentView.addSubview(titleLabel)
+        contentView.addSubview(containerView)
+        
+        containerView.snp.makeConstraints { make in
+            make.edges.equalToSuperview().inset(2)
+        }
+        
+        containerView.addSubview(titleLabel)
         
         titleLabel.snp.makeConstraints { make in
             make.edges.equalToSuperview().inset(4)
@@ -45,6 +72,9 @@ class Cell: UICollectionViewCell, Reusable {
         titleLabel.text = title
     }
     
+    static func estimatedWitdh(for title: String) -> CGFloat {
+        return title.size(withAttributes: [NSAttributedString.Key.font: Constants.font]).width
+    }
     
 }
 
@@ -92,6 +122,9 @@ class HorizontalWheelView: UIView {
     }
     
     private func setupView() {
+        
+
+        
         addSubview(collectionView)
         
         collectionView.snp.makeConstraints { make in
@@ -104,6 +137,16 @@ class HorizontalWheelView: UIView {
         super.layoutSubviews()
         
         select(row: selectedIndex?.row ?? 0, animated: false, tell: false)
+        
+        let leftInset = frame.width / 2 - sizeForItem(at: .init(row: .zero, section: .zero)).width / 2
+        let rightInset = frame.width / 2 - sizeForItem(at: .init(row: data.count - 1, section: .zero)).width / 2
+        
+        collectionView.contentInset = .init(
+            top: .zero,
+            left: leftInset,
+            bottom: .zero,
+            right: rightInset
+        )
     }
     
     func select(row: Int, animated: Bool = true, tell: Bool = true) {
@@ -119,7 +162,7 @@ class HorizontalWheelView: UIView {
     }
 }
 
-extension HorizontalWheelView: UICollectionViewDelegate, UICollectionViewDataSource {
+extension HorizontalWheelView: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return data.count
     }
@@ -132,5 +175,15 @@ extension HorizontalWheelView: UICollectionViewDelegate, UICollectionViewDataSou
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         select(row: indexPath.row)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        sizeForItem(at: indexPath)
+    }
+    
+    func sizeForItem(at indexPath: IndexPath) -> CGSize {
+        let padding = 12.0
+        
+        return .init(width: Cell.estimatedWitdh(for: data[indexPath.row]) + padding, height: 32)
     }
 }

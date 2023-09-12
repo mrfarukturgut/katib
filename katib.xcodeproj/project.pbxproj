@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EB8B2FA32AB1197400520D3C /* PrayerLogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8B2FA22AB1197400520D3C /* PrayerLogView.swift */; };
+		EB8B2FA52AB11CD800520D3C /* PrayerCalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8B2FA42AB11CD800520D3C /* PrayerCalendarView.swift */; };
 		EBD197C42A9A9128005852F5 /* DayCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD197C32A9A9128005852F5 /* DayCell.swift */; };
 		EBD197C62A9A9150005852F5 /* PrayerHistoryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD197C52A9A9150005852F5 /* PrayerHistoryController.swift */; };
 		EBD197C82A9A91A9005852F5 /* Day.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD197C72A9A91A9005852F5 /* Day.swift */; };
@@ -42,6 +44,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EB8B2FA22AB1197400520D3C /* PrayerLogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayerLogView.swift; sourceTree = "<group>"; };
+		EB8B2FA42AB11CD800520D3C /* PrayerCalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayerCalendarView.swift; sourceTree = "<group>"; };
 		EBD197C32A9A9128005852F5 /* DayCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayCell.swift; sourceTree = "<group>"; };
 		EBD197C52A9A9150005852F5 /* PrayerHistoryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayerHistoryController.swift; sourceTree = "<group>"; };
 		EBD197C72A9A91A9005852F5 /* Day.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day.swift; sourceTree = "<group>"; };
@@ -88,6 +92,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EB8B2FA12AB1195A00520D3C /* Subviews */ = {
+			isa = PBXGroup;
+			children = (
+				EB8B2FA22AB1197400520D3C /* PrayerLogView.swift */,
+				EB8B2FA42AB11CD800520D3C /* PrayerCalendarView.swift */,
+			);
+			path = Subviews;
+			sourceTree = "<group>";
+		};
 		EBD197BF2A9A90F4005852F5 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
@@ -125,6 +138,7 @@
 		EBD197CB2A9BA022005852F5 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				EB8B2FA12AB1195A00520D3C /* Subviews */,
 				EBD197CC2A9BA02C005852F5 /* PrayerHistoryView.swift */,
 			);
 			path = View;
@@ -337,6 +351,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB8B2FA32AB1197400520D3C /* PrayerLogView.swift in Sources */,
 				EBD197C42A9A9128005852F5 /* DayCell.swift in Sources */,
 				EBD197C82A9A91A9005852F5 /* Day.swift in Sources */,
 				EBD3461E2A6D74F60074CE57 /* AppDelegate.swift in Sources */,
@@ -345,6 +360,7 @@
 				EBD197C62A9A9150005852F5 /* PrayerHistoryController.swift in Sources */,
 				EBD346202A6D74F60074CE57 /* SceneDelegate.swift in Sources */,
 				EBD197CA2A9A91C0005852F5 /* Extensions.swift in Sources */,
+				EB8B2FA52AB11CD800520D3C /* PrayerCalendarView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
