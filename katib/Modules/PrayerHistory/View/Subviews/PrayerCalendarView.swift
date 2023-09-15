@@ -28,6 +28,11 @@ class PrayerCalendarView: UIView {
         
         super.init(frame: .zero)
         
+        layer.cornerRadius = 8
+        layer.borderColor = UIColor.systemBackground.cgColor
+        layer.borderWidth = 1
+        layer.masksToBounds = true
+        
         backgroundColor = .systemPink
         
         addSubview(yearWheel)

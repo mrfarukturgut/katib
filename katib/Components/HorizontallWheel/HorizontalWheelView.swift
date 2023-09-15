@@ -49,6 +49,9 @@ class Cell: UICollectionViewCell, Reusable {
     override init(frame: CGRect) {
         super.init(frame: .zero)
         
+        layer.cornerRadius = 8
+        layer.masksToBounds = true
+        
         contentView.backgroundColor = .systemBlue
         
         contentView.addSubview(containerView)
@@ -105,6 +108,7 @@ class HorizontalWheelView: UIView {
         collectionView.register(cellType: Cell.self)
         collectionView.allowsSelection = true
         collectionView.allowsMultipleSelection = false
+        collectionView.showsHorizontalScrollIndicator = false
         return collectionView
     }()
     
@@ -184,6 +188,6 @@ extension HorizontalWheelView: UICollectionViewDelegate, UICollectionViewDataSou
     func sizeForItem(at indexPath: IndexPath) -> CGSize {
         let padding = 12.0
         
-        return .init(width: Cell.estimatedWitdh(for: data[indexPath.row]) + padding, height: 32)
+        return .init(width: max(Cell.estimatedWitdh(for: data[indexPath.row]) + padding, 32), height: 32)
     }
 }

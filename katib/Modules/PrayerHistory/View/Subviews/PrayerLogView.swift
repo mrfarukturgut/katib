@@ -9,6 +9,40 @@ import SnapKit
 import Reusable
 import UIKit
 
+struct Month {
+    let date: Date
+    
+    var days: [Date] {
+        Array(Calendar.current.range(of: .day, in: .month, for: date)!).map({ Calendar.current.date(byAdding: .day, value: $0 - 1, to: date.startDateOfMonth)! })
+    }
+    
+    var previous: Month? {
+        .init(date: date.previousMonth!)
+    }
+    
+    var next: Month? {
+        .init(date: date.nextMonth!)
+    }
+}
+
+extension Date {
+    var nextMonth: Date? {
+        Calendar.current.date(byAdding: .month, value: 1, to: self)
+    }
+    
+    var previousMonth: Date? {
+        Calendar.current.date(byAdding: .month, value: -1, to: self)
+    }
+}
+
+struct Source {
+    let current: Month
+    
+    var data: [Date] {
+        [current.previous?.days, current.days, current.next?.days].compactMap({ $0 }).flatMap({ $0 })
+    }
+}
+
 class LogCell: UICollectionViewCell, Reusable {
     
     private lazy var titleLabel: UILabel = {
@@ -55,6 +89,8 @@ class LogCell: UICollectionViewCell, Reusable {
 }
 
 class PrayerLogView: UIView {
+    let source = Source(current: .init(date: .now))
+    
     private var layout: UICollectionViewFlowLayout {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .vertical
@@ -89,17 +125,21 @@ class PrayerLogView: UIView {
 
 extension PrayerLogView: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        5
+        source.data.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell: LogCell = collectionView.dequeueReusableCell(for: indexPath)
-        cell.setTitle("Test")
+        cell.setTitle(source.data[indexPath.row].formatted())
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        .init(width: collectionView.frame.width, height: 80)
+        .init(width: collectionView.frame.width - 24, height: 80)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        .init(top: 12, left: 12, bottom: 12, right: 12)
     }
     
 }
