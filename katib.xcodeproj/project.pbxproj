@@ -7,14 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		EB8B2FA32AB1197400520D3C /* PrayerLogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8B2FA22AB1197400520D3C /* PrayerLogView.swift */; };
-		EB8B2FA52AB11CD800520D3C /* PrayerCalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8B2FA42AB11CD800520D3C /* PrayerCalendarView.swift */; };
-		EBD197C42A9A9128005852F5 /* DayCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD197C32A9A9128005852F5 /* DayCell.swift */; };
+		EB2873812ACC7A98002E7C12 /* PrayerHistory.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EB28737F2ACC7A98002E7C12 /* PrayerHistory.xcdatamodeld */; };
 		EBD197C62A9A9150005852F5 /* PrayerHistoryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD197C52A9A9150005852F5 /* PrayerHistoryController.swift */; };
-		EBD197C82A9A91A9005852F5 /* Day.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD197C72A9A91A9005852F5 /* Day.swift */; };
-		EBD197CA2A9A91C0005852F5 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD197C92A9A91C0005852F5 /* Extensions.swift */; };
-		EBD197CD2A9BA02C005852F5 /* PrayerHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD197CC2A9BA02C005852F5 /* PrayerHistoryView.swift */; };
-		EBD197D12A9BA0E3005852F5 /* HorizontalWheelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD197D02A9BA0E3005852F5 /* HorizontalWheelView.swift */; };
 		EBD3461E2A6D74F60074CE57 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD3461D2A6D74F60074CE57 /* AppDelegate.swift */; };
 		EBD346202A6D74F60074CE57 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD3461F2A6D74F60074CE57 /* SceneDelegate.swift */; };
 		EBD346272A6D74F70074CE57 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EBD346262A6D74F70074CE57 /* Assets.xcassets */; };
@@ -44,14 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		EB8B2FA22AB1197400520D3C /* PrayerLogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayerLogView.swift; sourceTree = "<group>"; };
-		EB8B2FA42AB11CD800520D3C /* PrayerCalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayerCalendarView.swift; sourceTree = "<group>"; };
-		EBD197C32A9A9128005852F5 /* DayCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayCell.swift; sourceTree = "<group>"; };
+		EB2873802ACC7A98002E7C12 /* PrayerHistory.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PrayerHistory.xcdatamodel; sourceTree = "<group>"; };
 		EBD197C52A9A9150005852F5 /* PrayerHistoryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayerHistoryController.swift; sourceTree = "<group>"; };
-		EBD197C72A9A91A9005852F5 /* Day.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day.swift; sourceTree = "<group>"; };
-		EBD197C92A9A91C0005852F5 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
-		EBD197CC2A9BA02C005852F5 /* PrayerHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayerHistoryView.swift; sourceTree = "<group>"; };
-		EBD197D02A9BA0E3005852F5 /* HorizontalWheelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalWheelView.swift; sourceTree = "<group>"; };
 		EBD3461A2A6D74F60074CE57 /* katib.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = katib.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBD3461D2A6D74F60074CE57 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EBD3461F2A6D74F60074CE57 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -92,15 +80,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		EB8B2FA12AB1195A00520D3C /* Subviews */ = {
-			isa = PBXGroup;
-			children = (
-				EB8B2FA22AB1197400520D3C /* PrayerLogView.swift */,
-				EB8B2FA42AB11CD800520D3C /* PrayerCalendarView.swift */,
-			);
-			path = Subviews;
-			sourceTree = "<group>";
-		};
 		EBD197BF2A9A90F4005852F5 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
@@ -112,52 +91,9 @@
 		EBD197C02A9A90FD005852F5 /* PrayerHistory */ = {
 			isa = PBXGroup;
 			children = (
-				EBD197CB2A9BA022005852F5 /* View */,
-				EBD197C22A9A9118005852F5 /* Cells */,
 				EBD197C52A9A9150005852F5 /* PrayerHistoryController.swift */,
 			);
 			path = PrayerHistory;
-			sourceTree = "<group>";
-		};
-		EBD197C12A9A910C005852F5 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				EBD197C72A9A91A9005852F5 /* Day.swift */,
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
-		EBD197C22A9A9118005852F5 /* Cells */ = {
-			isa = PBXGroup;
-			children = (
-				EBD197C32A9A9128005852F5 /* DayCell.swift */,
-			);
-			path = Cells;
-			sourceTree = "<group>";
-		};
-		EBD197CB2A9BA022005852F5 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				EB8B2FA12AB1195A00520D3C /* Subviews */,
-				EBD197CC2A9BA02C005852F5 /* PrayerHistoryView.swift */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		EBD197CE2A9BA0C4005852F5 /* Components */ = {
-			isa = PBXGroup;
-			children = (
-				EBD197CF2A9BA0CD005852F5 /* HorizontallWheel */,
-			);
-			path = Components;
-			sourceTree = "<group>";
-		};
-		EBD197CF2A9BA0CD005852F5 /* HorizontallWheel */ = {
-			isa = PBXGroup;
-			children = (
-				EBD197D02A9BA0E3005852F5 /* HorizontalWheelView.swift */,
-			);
-			path = HorizontallWheel;
 			sourceTree = "<group>";
 		};
 		EBD346112A6D74F60074CE57 = {
@@ -183,15 +119,13 @@
 		EBD3461C2A6D74F60074CE57 /* katib */ = {
 			isa = PBXGroup;
 			children = (
-				EBD197CE2A9BA0C4005852F5 /* Components */,
-				EBD197C12A9A910C005852F5 /* Models */,
 				EBD197BF2A9A90F4005852F5 /* Modules */,
 				EBD3461D2A6D74F60074CE57 /* AppDelegate.swift */,
 				EBD3461F2A6D74F60074CE57 /* SceneDelegate.swift */,
-				EBD197C92A9A91C0005852F5 /* Extensions.swift */,
 				EBD346262A6D74F70074CE57 /* Assets.xcassets */,
 				EBD346282A6D74F70074CE57 /* LaunchScreen.storyboard */,
 				EBD3462B2A6D74F70074CE57 /* Info.plist */,
+				EB28737F2ACC7A98002E7C12 /* PrayerHistory.xcdatamodeld */,
 			);
 			path = katib;
 			sourceTree = "<group>";
@@ -351,16 +285,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EB8B2FA32AB1197400520D3C /* PrayerLogView.swift in Sources */,
-				EBD197C42A9A9128005852F5 /* DayCell.swift in Sources */,
-				EBD197C82A9A91A9005852F5 /* Day.swift in Sources */,
 				EBD3461E2A6D74F60074CE57 /* AppDelegate.swift in Sources */,
-				EBD197CD2A9BA02C005852F5 /* PrayerHistoryView.swift in Sources */,
-				EBD197D12A9BA0E3005852F5 /* HorizontalWheelView.swift in Sources */,
 				EBD197C62A9A9150005852F5 /* PrayerHistoryController.swift in Sources */,
+				EB2873812ACC7A98002E7C12 /* PrayerHistory.xcdatamodeld in Sources */,
 				EBD346202A6D74F60074CE57 /* SceneDelegate.swift in Sources */,
-				EBD197CA2A9A91C0005852F5 /* Extensions.swift in Sources */,
-				EB8B2FA52AB11CD800520D3C /* PrayerCalendarView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -732,6 +660,19 @@
 			productName = Reusable;
 		};
 /* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		EB28737F2ACC7A98002E7C12 /* PrayerHistory.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				EB2873802ACC7A98002E7C12 /* PrayerHistory.xcdatamodel */,
+			);
+			currentVersion = EB2873802ACC7A98002E7C12 /* PrayerHistory.xcdatamodel */;
+			path = PrayerHistory.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = EBD346122A6D74F60074CE57 /* Project object */;
 }
